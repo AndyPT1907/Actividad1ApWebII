@@ -1,0 +1,73 @@
+<div class="fondo-pantalla">
+    <form>
+        <input type="text" [(ngModel)]="idBusqueda" placeholder="ID del videojuego" [ngModelOptions]="{standalone: true}">
+       
+    </form>
+    
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Imagen</th>
+                <th scope="col">Detalles</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (juego of productos; track juego) {
+            <tr>
+                @if( juego.id == idBusqueda ) {
+                         <th scope="row">{{juego.id}}</th>
+                    <td>{{juego.nombre}}</td>
+                    <td>{{juego.precio}}</td>
+                    <td>
+                        <!--///////////////////////////////-->
+                        @if( visualizar == juego.id ){
+                        <button (click)="ver(juego.id)">Imagen del juego</button>
+                        <img src="{{juego.url}}" alt="" height="200">
+                        } @else {
+                        <button class="btn btn-primary" (click)="ver( juego.id )">Imagen del juego</button>
+                        }
+                        <!--//////////////////////////////////-->
+                    </td>
+    
+                    <td>
+                         <button [routerLink]="['/juegos-detalles', juego.id]">Detalles</button>
+                    </td>
+                    }
+            </tr>
+            }
+        </tbody>
+    </table>
+    <table class="table table-dark">
+        <thead>
+          <tr>
+            <th>ID disponibles para la busqueda</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>vd1</td>
+         
+          </tr>
+          <tr>
+            <td>vd2</td>
+          
+          </tr>
+          <tr>
+            <td>vd3</td>
+            
+          </tr>
+          <tr>
+            <td>vd4</td>
+            
+          </tr>
+        </tbody>
+      </table>
+      <button routerLink="regresar">Regresar</button>
+      <br>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</div>

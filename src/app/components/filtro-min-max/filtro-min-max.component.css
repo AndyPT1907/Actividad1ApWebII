@@ -1,0 +1,10 @@
+.fondo-pantalla {
+    background-image: url('https://w7.pngwing.com/pngs/141/400/png-transparent-desktop-black-black-background-miscellaneous-black-hair-computer.png'); /* Reemplaza 'ruta/de/tu/imagen.jpg' con la ruta de tu imagen de fondo */
+    background-size: cover; /* Para cubrir todo el contenedor */
+    background-position: center; /* Centra la imagen de fondo */
+     color: white; /* Ajusta el color del texto para que sea legible sobre la imagen */
+}
+
+.colorh2{
+    color: aliceblue;
+}

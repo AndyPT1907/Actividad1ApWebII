@@ -1,0 +1,31 @@
+/* Establece la imagen de fondo para toda la pantalla */
+.fondo-pantalla {
+    background-image: url('https://w7.pngwing.com/pngs/141/400/png-transparent-desktop-black-black-background-miscellaneous-black-hair-computer.png'); /* Reemplaza 'ruta/de/tu/imagen.jpg' con la ruta de tu imagen de fondo */
+    background-size: cover; /* Para cubrir toda la pantalla */
+    background-position: center; /* Centra la imagen de fondo */
+}
+
+/* Estilos para el contenedor de los botones */
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ajusta la altura del contenedor para ocupar toda la altura de la pantalla */
+}
+
+/* Estilos para los botones */
+.filtro-btn {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filtro-btn:hover {
+    background-color: #0056b3;
+}
